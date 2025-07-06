@@ -10,5 +10,5 @@ mv kubectl /usr/local/bin/kubectl
 mv kops-linux-amd64 /usr/local/bin/kops
 
 export KOPS_STATE_STORE=s3://vishnu.dxc.k8s
-kops create cluster --name vishnu.k8s.local --zones us-east-1a --master-count=1 --master-size t3.medium --master-volume-size 30 --node-count=3 --node-size t3.micro --node-volume-size 30 --image <ubuntu latest ami id>
+kops create cluster --name vishnu.k8s.local --zones us-east-1a --master-count=1 --master-size t3.medium --master-volume-size 30 --node-count=3 --node-size t3.micro --node-volume-size 30 --image <(ami-020cba7c55df1f615)ubuntu latest ami id>
 kops update cluster --name vishnu.k8s.local --yes --admin
